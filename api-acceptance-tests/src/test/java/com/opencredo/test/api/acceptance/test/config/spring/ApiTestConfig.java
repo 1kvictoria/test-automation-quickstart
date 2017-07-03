@@ -5,6 +5,7 @@ import com.opencredo.test.api.acceptance.test.config.ApiTestProperties;
 import com.opencredo.test.api.acceptance.test.interaction.api.objects.GithubApi;
 import com.opencredo.test.api.acceptance.test.interaction.api.objects.GithubStatusApi;
 import com.opencredo.test.api.acceptance.test.interaction.api.objects.MessagingApi;
+import com.opencredo.test.api.acceptance.test.interaction.api.objects.TflApi;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.springframework.context.annotation.Bean;
@@ -29,6 +30,11 @@ public class ApiTestConfig {
     @Bean
     public GithubApi githubApi() {
         return new GithubApi(properties().getGithubApiUrl());
+    }
+
+    @Bean
+    public TflApi tflApi() {
+        return new TflApi(properties().getTflApiUrl());
     }
 
     @Bean

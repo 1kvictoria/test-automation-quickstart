@@ -15,6 +15,10 @@ public class ApiTestProperties {
         return environment.getProperty("api.acceptance.test.github.api");
     }
 
+    public String getTflApiUrl() {
+        return environment.getProperty("api.acceptance.test.tfl.api");
+    }
+
     public String getMessagingApiUrl() {
         return environment.getProperty("api.acceptance.test.messaging.api");
     }

@@ -29,6 +29,7 @@ public class SharedDriver extends EventFiringWebDriver {
 
     private static WebDriver getRealDriver() {
         if (REAL_DRIVER == null) {
+            System.setProperty("webdriver.gecko.driver","/Users/victoriaakhchiyani/Documents/geckodriver");
             REAL_DRIVER = new FirefoxDriver();
         }
         return REAL_DRIVER;
