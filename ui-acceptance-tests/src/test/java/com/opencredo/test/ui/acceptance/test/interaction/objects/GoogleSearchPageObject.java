@@ -3,7 +3,7 @@ package com.opencredo.test.ui.acceptance.test.interaction.objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class GoogleSearchPageObject extends AbstractPageObject {
+public class GoogleSearchPageObject extends PageObject {
     public static final String PATH = "/";
 
     private final By searchTextbox = By.name("q");

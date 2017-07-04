@@ -1,5 +1,6 @@
 package com.opencredo.test.ui.acceptance.test.config.spring;
 
+import com.opencredo.test.ui.acceptance.test.interaction.objects.BingSearchPageObject;
 import com.opencredo.test.ui.acceptance.test.interaction.objects.GoogleSearchPageObject;
 import com.opencredo.test.ui.acceptance.test.config.TestWorld;
 import com.opencredo.test.ui.acceptance.test.config.UiTestProperties;
@@ -35,4 +36,14 @@ public class UiTestConfig {
                 properties().getSeleniumWaitTimeOutSeconds()
         );
     }
+
+    @Bean
+    public BingSearchPageObject bingSearchPage() {
+        return new BingSearchPageObject(
+                properties().getApplicationBaseUrl(),
+                driver(),
+                properties().getSeleniumWaitTimeOutSeconds()
+        );
+    }
+
 }

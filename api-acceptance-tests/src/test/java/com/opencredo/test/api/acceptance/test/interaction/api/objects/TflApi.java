@@ -6,15 +6,18 @@ package com.opencredo.test.api.acceptance.test.interaction.api.objects;
  * import java.io.InputStreamReader;
  */
 
-import com.opencredo.test.TflLines;
 import org.springframework.http.ResponseEntity;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-/**import java.net.MalformedURLException;*/
-import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * import java.net.MalformedURLException;
+ */
 
 public class TflApi extends AbstractApiObject {
+
+    public static final List<String> linesListForDisruption = Arrays.asList("central", "victoria", "northern", "jubilee");
 
     public TflApi(String baseUrl) {
         super(baseUrl);
@@ -25,7 +28,7 @@ public class TflApi extends AbstractApiObject {
     }
 
     public String getLineWithoutDisruptions() {
-        for (String lineName : TflLines.linesListForDisruption) {
+        for (String lineName : linesListForDisruption) {
             getDisruption(lineName);
             System.out.println(lineName);
             if (getDisruption(lineName).getBody() == null) {

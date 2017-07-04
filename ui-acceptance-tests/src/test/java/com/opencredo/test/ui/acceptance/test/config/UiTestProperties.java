@@ -14,6 +14,10 @@ public class UiTestProperties {
         return environment.getProperty("ui.acceptance.test.application.base.url");
     }
 
+    public String getApplicationBaseUrlforBing() {
+        return environment.getProperty("ui.acceptance.test.application.base.url.bing");
+    }
+
     public int getSeleniumWaitTimeOutSeconds() {
         return environment.getProperty("ui.acceptance.test.selenium.wait.timeout.seconds", Integer.class, 10);
     }

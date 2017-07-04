@@ -24,7 +24,7 @@ public class GoogleSearchStepDefs extends AbstractStepDefinition {
         googleSearchPage.goToAndWait();
     }
 
-    @When("^I search for \"(.+)\"$")
+    @When("^I search for  $")
     public void I_search_for(String searchText) throws Throwable {
         googleSearchPage.search(searchText);
     }

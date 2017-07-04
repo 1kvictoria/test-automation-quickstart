@@ -16,12 +16,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Reusable methods for all page objects
  */
-public abstract class AbstractPageObject {
+public abstract class PageObject {
     private String path;
     private final WebDriver driver;
     private final int waitTimeOutSeconds;
 
-    public AbstractPageObject(String path, WebDriver driver, int waitTimeOutSeconds) {
+    public PageObject(String path, WebDriver driver, int waitTimeOutSeconds) {
         this.path = path;
         this.driver = driver;
         this.waitTimeOutSeconds = waitTimeOutSeconds;
