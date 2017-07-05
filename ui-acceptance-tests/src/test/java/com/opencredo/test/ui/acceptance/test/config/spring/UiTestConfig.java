@@ -40,7 +40,7 @@ public class UiTestConfig {
     @Bean
     public BingSearchPageObject bingSearchPage() {
         return new BingSearchPageObject(
-                properties().getApplicationBaseUrl(),
+                properties().getApplicationBaseUrlforBing(),
                 driver(),
                 properties().getSeleniumWaitTimeOutSeconds()
         );
